@@ -1,7 +1,7 @@
 # Cash Reminder App
 
 ## Overview
-Cash Reminder is a simple, user-friendly mobile app designed to help you stay on top of your payments and bills. The app was created out of a personal need—forgetting to make payments on time. With Payment Reminder, you can set reminders for upcoming payments, ensuring you're always on time and avoid late fees.
+Cash Reminder is a simple, user-friendly mobile app designed to help you stay on top of your payments and bills. The app was created out of a personal need—forgetting to make payments on time. With Cash Reminder, you can set reminders for upcoming payments, ensuring you're always on time and avoid late fees.
 
 ## Why I want to create this app?
 
