@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import { sqliteTable } from "drizzle-orm/sqlite-core";
 import * as t from "drizzle-orm/sqlite-core";
 
@@ -21,6 +22,12 @@ export const payments = sqliteTable("payments", {
     .integer("category_id")
     .references(() => categories.id)
     .notNull(),
+  createdAt: t
+    .integer("created_at", { mode: "timestamp" })
+    .default(sql`(CURRENT_TIMESTAMP)`),
+  updatedAt: t
+    .integer("updated_at", { mode: "timestamp" })
+    .default(sql`(CURRENT_TIMESTAMP)`),
 });
 
 export const reminders = sqliteTable("reminders", {
