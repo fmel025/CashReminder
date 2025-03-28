@@ -1,1 +1,3 @@
-export const DATABASE_NAME = "" // Add one later from env
+import { DATABASE_NAME } from "@env"
+
+export const DB_NAME = DATABASE_NAME;

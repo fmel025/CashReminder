@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View, Alert } from "react-native";
+import { DB_NAME } from "../db";
 
 export default function App() {
   return (
