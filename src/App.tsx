@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View, Alert } from "react-native";
 import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
 import migrations from "../drizzle/migrations";
-import { categories, db, Category, expo_sqlite } from "../db";
+import { categories, db, Category, expo_sqlite } from "../database";
 import { useEffect, useState } from "react";
 import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
 
