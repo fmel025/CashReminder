@@ -6,5 +6,5 @@ import * as schema from "./schema";
 
 export const DB_NAME = DATABASE_NAME;
 
-export const expo_sqlite = openDatabaseSync(DB_NAME);
-export const db = drizzle(expo_sqlite, { schema });
+export const sqlite_db = openDatabaseSync(DB_NAME);
+export const db = drizzle(sqlite_db, { schema });
