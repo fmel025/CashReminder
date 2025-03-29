@@ -5,7 +5,7 @@ import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
 import { SQLiteProvider } from "expo-sqlite";
 import { Suspense } from "react";
 
-import { db, sqlite_db, DB_NAME as DATABASE_NAME } from "../database";
+import { db, sqlite_db, DATABASE_NAME } from "../database";
 import migrations from "../drizzle/migrations";
 
 import { Main } from "./main";

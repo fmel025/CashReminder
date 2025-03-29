@@ -4,6 +4,7 @@ import { DATABASE_NAME } from "@env";
 
 import { schema } from "./schema";
 
-export const DB_NAME = DATABASE_NAME;
-export const sqlite_db = openDatabaseSync(DB_NAME);
-export const db = drizzle(sqlite_db, { schema });
+const sqlite_db = openDatabaseSync(DATABASE_NAME);
+const db = drizzle(sqlite_db, { schema });
+
+export { sqlite_db, db, DATABASE_NAME };
