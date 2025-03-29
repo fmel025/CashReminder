@@ -23,5 +23,5 @@ CREATE TABLE `reminders` (
 	`payment_id` integer NOT NULL,
 	`reminder_date` integer NOT NULL,
 	`is_sent` integer DEFAULT false NOT NULL,
-	FOREIGN KEY (`payment_id`) REFERENCES `payments`(`id`) ON UPDATE no action ON DELETE no action
+	FOREIGN KEY (`payment_id`) REFERENCES `payments`(`id`) ON UPDATE no action ON DELETE cascade
 );

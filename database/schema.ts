@@ -34,7 +34,7 @@ export const reminders = sqliteTable("reminders", {
   id: t.integer("id").primaryKey({ autoIncrement: true }),
   paymentId: t
     .integer("payment_id")
-    .references(() => payments.id)
+    .references(() => payments.id, { onDelete: "cascade" })
     .notNull(),
   reminderDate: t.integer("reminder_date", { mode: "timestamp" }).notNull(),
   isSent: t.integer("is_sent", { mode: "boolean" }).notNull().default(false),
