@@ -1,4 +1,4 @@
-import * as Schema from "./schema";
+import { schema as Schema } from "./schema";
 
 export type Category = typeof Schema.categories.$inferSelect;
 export type Payment = typeof Schema.payments.$inferInsert;

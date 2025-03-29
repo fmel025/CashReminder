@@ -39,3 +39,5 @@ export const reminders = sqliteTable("reminders", {
   reminderDate: t.integer("reminder_date", { mode: "timestamp" }).notNull(),
   isSent: t.integer("is_sent", { mode: "boolean" }).notNull().default(false),
 });
+
+export const schema = { categories, reminders, payments };
