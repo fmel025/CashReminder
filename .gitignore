@@ -34,3 +34,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# Ignore SQLite database files
+drizzle/sqlite.db
+
+.env
