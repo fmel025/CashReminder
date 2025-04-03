@@ -6,8 +6,7 @@ import { View, Text } from "react-native";
 import { useDatabase } from "@Hooks/useDatabase";
 
 function Main() {
-  const db = useSQLiteContext();
-  const drizzleDb = useDatabase(db);
+  const { drizzleDb } = useDatabase();
 
   // This is only an example and not final code
   const { data } = useLiveQuery(drizzleDb.query.categories.findMany());
