@@ -4,6 +4,6 @@ import { schema } from "@Database/index";
 
 export const useDatabase = () => {
   const db = useSQLiteContext();
-  return drizzle(db, { schema });
-}
- 
+  const drizzleDb = drizzle(db, { schema });
+  return { db, drizzleDb };
+};
