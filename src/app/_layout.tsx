@@ -1,10 +1,11 @@
-import { DATABASE_NAME } from "@env";
-import { useDatabaseConnection } from "@Hooks/useDatabaseConnection";
-import { Slot } from "expo-router";
-import { SQLiteProvider } from "expo-sqlite";
 import { Suspense, useEffect } from "react";
 import { ActivityIndicator } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Slot, Stack } from "expo-router";
+import { SQLiteProvider } from "expo-sqlite";
+
+import { DATABASE_NAME } from "@env";
+import { useDatabaseConnection } from "@Hooks/useDatabaseConnection";
 
 export default function RootLayout() {
   const { success, error } = useDatabaseConnection();
@@ -22,7 +23,10 @@ export default function RootLayout() {
       >
         <SafeAreaProvider>
           <SafeAreaView style={{ flex: 1 }}>
-            <Slot />
+            <Stack>
+              <Stack.Screen name="index" />
+              <Stack.Screen name="categories" />
+            </Stack>
           </SafeAreaView>
         </SafeAreaProvider>
       </SQLiteProvider>
