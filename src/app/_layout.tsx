@@ -4,8 +4,16 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Slot, Stack } from "expo-router";
 import { SQLiteProvider } from "expo-sqlite";
 
+import {
+  DarkTheme,
+  ThemeProvider as NavThemeProvider,
+  Theme,
+} from "@react-navigation/native";
+
 import { DATABASE_NAME } from "@env";
 import { useDatabaseConnection } from "@Hooks/useDatabaseConnection";
+
+import "../../global.css";
 
 export default function RootLayout() {
   const { success, error } = useDatabaseConnection();
