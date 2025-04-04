@@ -1,6 +1,10 @@
 import { drizzle } from "drizzle-orm/expo-sqlite";
-import { SQLiteDatabase } from "expo-sqlite";
+import { useSQLiteContext } from "expo-sqlite";
+
 import { schema } from "@Database/index";
 
-export const useDatabase = (database: SQLiteDatabase) =>
-  drizzle(database, { schema });
+export const useDatabase = () => {
+  const db = useSQLiteContext();
+  const drizzleDb = drizzle(db, { schema });
+  return { db, drizzleDb };
+};

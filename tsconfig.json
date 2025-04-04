@@ -6,6 +6,8 @@
     "paths": {
       "@Database/*": ["./database/*"],
       "@Hooks/*": ["src/hooks/*"],
+      "@Components/*": ["src/components/*"],
+      "@Types/*": ["src/types/*"]
     }
   }
 }
