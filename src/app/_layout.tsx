@@ -30,10 +30,16 @@ export default function RootLayout() {
         useSuspense
       >
         <SafeAreaProvider>
-          <SafeAreaView style={{ flex: 1 }}>
-            <Stack>
+          <SafeAreaView className="bg-green-100 flex-1">
+            <Stack
+              screenOptions={{
+                headerShown: false,
+              }}
+            >
               <Stack.Screen name="index" />
-              <Stack.Screen name="categories" />
+              <Stack.Screen
+                name="categories"
+              />
             </Stack>
           </SafeAreaView>
         </SafeAreaProvider>
