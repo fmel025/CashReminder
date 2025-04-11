@@ -27,7 +27,7 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-sqlite"
+      "expo-router"
     ]
   }
 }
