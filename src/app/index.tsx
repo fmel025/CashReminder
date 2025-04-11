@@ -1,14 +1,8 @@
-import { useDatabase } from "@Hooks/useDatabase";
-import { useLiveQuery } from "drizzle-orm/expo-sqlite";
-import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
 import { useRouter } from "expo-router";
-import { View, Text, Button, Pressable } from "react-native";
+import { View, Text, Pressable } from "react-native";
 
 export default function Home() {
-  const { db, drizzleDb } = useDatabase();
   const router = useRouter();
-
-  useDrizzleStudio(db);
 
   return (
     <View className="flex-1 items-center justify-center bg-green-100">
